@@ -1,10 +1,11 @@
 --Part 1
 
---Int id
---String employer
---String name
---String skills
-
+INT id
+VARCHAR(250) employer
+VARCHAR(250) name
+VARCHAR(250) skills
+VARCHAR(999) description
+VARCHAR(250) location
 
 --Part 2
 
@@ -13,7 +14,6 @@ SELECT name FROM employer WHERE location = "St. Louis City";
 --Part 3
 
 DROP TABLE job;
-Pattern.CASE_INSENSITIVE | Pattern.MULTILINE;
 
 --Part 4
 

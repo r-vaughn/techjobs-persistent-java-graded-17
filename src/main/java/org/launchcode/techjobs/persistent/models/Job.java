@@ -9,6 +9,14 @@ import java.util.List;
 @Entity
 public class Job extends AbstractEntity{
 
+//    @Id
+//    @GeneratedValue
+//    private int id;
+//
+//    private String name;
+//    private String employer;
+//    private String skills;
+
     @ManyToOne
     private Employer employer;
 
@@ -16,17 +24,26 @@ public class Job extends AbstractEntity{
     private List<Skill> skills = new ArrayList<>();
 
 
-    public Job() {
-    }
-
     // Initialize the id and value fields.
-    public Job(Employer anEmployer, List someSkills) {
+    public Job(Employer anEmployer, List<Skill> someSkills) {
         super();
         this.employer = anEmployer;
         this.skills = someSkills;
     }
 
+    public Job() {
+
+    }
     // Getters and setters.
+
+//    public String getName() {
+//        return name;
+//    }
+//
+//
+//    public void setName(String name) {
+//        this.name = name;
+//    }
 
 
     public Employer getEmployer() {

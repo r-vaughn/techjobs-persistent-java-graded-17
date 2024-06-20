@@ -18,11 +18,19 @@ public abstract class AbstractEntity {
     private int id;
 
     @NotBlank(message = "Name is required.")
-    @Size(min = 1, max = 250, message = "Name is too long. Must be less than 250 characters.")
+    @Size(max = 250, message = "Name is too long. Must be less than 250 characters.")
     private String name;
+
+    public AbstractEntity() {
+
+    }
 
     public int getId() {
         return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
